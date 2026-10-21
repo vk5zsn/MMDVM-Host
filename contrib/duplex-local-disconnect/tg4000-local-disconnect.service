@@ -1,0 +1,22 @@
+[Unit]
+Description=Duplex TG4000 local trigger for BrandMeister API disconnect
+Wants=network-online.target
+After=network-online.target mmdvmhost.service dmrgateway.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -B /usr/local/libexec/tg4000-local-disconnect.py
+Restart=on-failure
+RestartSec=5
+User=root
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

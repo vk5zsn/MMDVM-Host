@@ -1,0 +1,10 @@
+[Disconnect]
+# Replace these values with your own device ID (including ESSID) and callers.
+DeviceId=123456701
+AllowedCallers=YOURCALL
+LogDirectory=/var/log/pi-star
+HostConfig=/etc/mmdvmhost
+GatewayConfig=/etc/dmrgateway
+NetworkSection=DMR Network 1
+# Existing WPSD file: [key] section, apikey entry. Never commit the key.
+KeyFile=/etc/bmapi.key

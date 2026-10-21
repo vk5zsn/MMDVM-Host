@@ -42,3 +42,11 @@ route and generating an unlink announcement are decisions made by the gateway
 or master. In particular, delivery of TG4000 to a BrandMeister master does not
 by itself guarantee immediate termination of the current downlink.
 
+
+## Local duplex disconnect workaround
+
+This branch also includes an optional [TG4000 API disconnect companion](contrib/duplex-local-disconnect/README.md)
+for WPSD duplex hotspots. It restores the local RF-triggered workaround while
+BrandMeister busy-slot command handling is investigated. It can run alongside
+the original WPSD binary; see its installation, limitations, and rollback notes.
+
